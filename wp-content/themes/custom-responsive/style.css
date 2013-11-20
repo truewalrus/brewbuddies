@@ -1,0 +1,19 @@
+/*
+ Theme Name:     Custom Responsive
+ Theme URI:      http://www.trurek.com/custom-responsive/
+ Description:    Custom Responsive
+ Author:         Jonathan Levy
+ Author URI:     http://www.trurek.com
+ Template:       responsive
+ Version:        1.0.0
+*/
+
+@import url("../responsive/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.centered {
+	width: 100%;
+	text-align: center;
+}
