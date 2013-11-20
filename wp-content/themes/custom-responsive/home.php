@@ -26,7 +26,7 @@ $more = 0;
 ?>
 	<div class = "centered"><?php get_search_form(); ?></div>
 
-	<div id="content-blog" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+	<div id="content-blog" class="centered <?php echo implode( ' ', responsive_get_content_classes() ); ?>">
 		<!-- Blog page title -->
 		<?php if( responsive_free_get_option( 'blog_post_title_toggle' ) ) { ?>
 			<h1> <?php echo responsive_free_get_option( 'blog_post_title_text' ); ?> </h1>
