@@ -1,1 +1,1 @@
-use custom-responsive theme. beer.sql is the db
+git pull brew master to pull
