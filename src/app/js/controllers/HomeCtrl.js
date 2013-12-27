@@ -1,9 +1,19 @@
 'use strict';
-angular.module("myApp.controllers").controller('HomeCtrl', ['$scope','$location', function($scope, $location){
+var myApp = angular.module("myApp.controllers");
+
+myApp.controller('HomeCtrl', ['$scope','$location', '$http', function($scope, $location, $http){
 	$scope.searchTerms = "";
-	
-	$scope.search = function(){
-		$location.url('/browse');
+
+	$scope.search = function() {
+		var url = 'http://' + window.location.host + '/api/beers/' + encodeURI($scope.searchTerms);
+		var promise = $http.get(url);
+		promise.success(function(results) {
+			console.log('success');
+			console.log(results);
+		}).error(function(error) {
+			console.log('fail');
+			console.log(error);
+		});
 	};
  
 }]);
