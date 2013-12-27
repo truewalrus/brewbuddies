@@ -12,11 +12,6 @@ module.exports = function(grunt) {
 			},
 			release: {
 				files: {
-					'dist/server.js': [
-										'src/server_header.js',
-										'src/node/**/*.js',
-										'src/database.js',
-										'src/server_footer.js'],
 					'dist/app/js/build.js': [ 'src/app/js/**/*.js' ]
 				}
 			}
@@ -89,14 +84,8 @@ module.exports = function(grunt) {
 					separator: '\n\n'
 				},
 				files: {
-					'dev/server.js': [
-										'src/server_header.js',
-										'src/node/**/*.js',
-										'src/database.js',
-										'src/server_footer.js'],
 					'dev/app/js/build.js': [ 'src/app/js/**/*.js' ],
-					'dev/app/lib/js/third-party.js': ['src/app/lib/thirdparty/*.js'],
-					'dev/app/index.html': [ 'src/app/index.html' ]
+					'dev/app/lib/js/third-party.js': ['src/app/lib/thirdparty/*.js']
 				}
 			},
 			release: {
@@ -111,7 +100,10 @@ module.exports = function(grunt) {
 		copy: {
 			develop: {
 				files: [
-					{expand: true, flatten: true, src: ['src/app/partials/*'], dest: 'dev/app/partials', filter: 'isFile'}
+					{expand: true, flatten: true, src: ['src/app/partials/*'], dest: 'dev/app/partials', filter: 'isFile'},
+					{expand: true, flatten: false, cwd:'src/node', src: ['**'], dest: 'dev/node'},
+					{expand: true, flatten: false, cwd:'src', src: ['server.js'], dest: 'dev', filter: 'isFile'},
+					{expand: true, flatten: false, cwd:'src/app', src: ['index.html'], dest: 'dev/app', filter: 'isFile'}
 				]
 			},
 			release: {

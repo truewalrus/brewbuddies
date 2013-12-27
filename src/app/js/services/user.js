@@ -3,6 +3,7 @@
 angular.module("myApp.services")
     .service('user', ['$rootScope', '$http', function($rootScope, $http){
 
+/*
         var user = false;
         var loggedIn = false;
 
@@ -11,6 +12,7 @@ angular.module("myApp.services")
             this.user = data;
         };*/
 
+/*
         this.getUser = function() { return user; };
         this.isLoggedIn = function() { return loggedIn; };
 
@@ -72,5 +74,6 @@ angular.module("myApp.services")
 					error(data);
 				});
 		};
+*/
 
 }]);
