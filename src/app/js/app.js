@@ -9,6 +9,7 @@ var app = angular.module('myApp', ['myApp.filters', 'myApp.directives', 'myApp.s
     // angular front end routes
     $routeProvider.when('/home', {templateUrl: '/partials/home.html'});
     $routeProvider.when('/sign-in', {templateUrl: '/partials/sign-in.html'});
+	$routeProvider.when('/browse', {templateUrl: '/partials/browse.html'});
 
     $routeProvider.otherwise({redirectTo: '/home'});
 
