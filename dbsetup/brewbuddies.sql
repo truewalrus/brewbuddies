@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 27, 2013 at 03:48 AM
+-- Generation Time: Dec 27, 2013 at 05:57 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -97,7 +97,14 @@ CREATE TABLE IF NOT EXISTS `post` (
   PRIMARY KEY (`id`),
   KEY `beer_id` (`beer_id`,`reviewer_id`),
   KEY `reviewer_id` (`reviewer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `beer_id`, `title`, `picture_url`, `review_text`, `reviewer_id`, `created_at`, `thumbs_up`) VALUES
+(1, 1, 'Guinness Time!!', 'http://upload.wikimedia.org/wikipedia/commons/9/92/Guinness.jpg', 'This shit is bomb as fuck', 1, '2013-12-27 05:48:15', 1);
 
 -- --------------------------------------------------------
 
